@@ -50,11 +50,14 @@ namespace Examen1
 
         public string[] edadYsexo(string curp)
         {
-            int[] retorno = new int[2];
+            string[] retorno = new string[2];
 
             string ano = curp[4].ToString() + curp[5].ToString();
             string mes = curp[6].ToString() + curp[7].ToString();
             string dia = curp[8].ToString() + curp[9].ToString();
+
+            string sexo = curp[10].ToString();
+            retorno[1] = sexo;
 
             DateTime fechaNac = DateTime.Parse(dia + "/" + mes + "/" + ano);
 
@@ -64,13 +67,13 @@ namespace Examen1
 
             if (hoy.Month < fechaNac.Month)
             {
-                retorno[1] = ((edad.Year - 1) + " años");
+                retorno[0] = (edad.Year - 1) + " años";
             }
             else
             {
-                retorno[1] = (edad.Year + " años");
+                retorno[0] = edad.Year + " años";
             }
-            return null;
+            return retorno;
         }
     }
 }
