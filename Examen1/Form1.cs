@@ -35,8 +35,8 @@ namespace Examen1
                         {
                             DGV.Rows[i].Cells[j].Value = col[j];
                             string curp = col[0];
-                            DGV.Rows[i-1].Cells[j+1].Value = edadYsexo(curp)[0];
-                            DGV.Rows[i-1].Cells[j+2].Value = edadYsexo(curp)[1];
+                            DGV.Rows[i-1].Cells[j+2].Value = edadYsexo(curp)[0];
+                            DGV.Rows[i-1].Cells[j+3].Value = edadYsexo(curp)[1];
                         }
                     }
                 }
